@@ -8,9 +8,12 @@ interface LevelBadgeProps {
 }
 
 const levelConfig: Record<RegionLevel, { label: string; className: string }> = {
+  // 省级 - 蓝色
   province: { label: '省', className: 'bg-blue-100 text-blue-700' },
+  // 地级 - 绿色
   city: { label: '地级市', className: 'bg-green-100 text-green-700' },
-  district: { label: '市辖区', className: 'bg-purple-100 text-purple-700' },
+  // 县级 - 统一橙色（包含市辖区、县级市等）
+  district: { label: '市辖区', className: 'bg-orange-100 text-orange-700' },
   county_city: { label: '县级市', className: 'bg-orange-100 text-orange-700' },
 };
 
