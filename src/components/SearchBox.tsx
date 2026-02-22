@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { Search, MapPin, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { LevelBadge } from '@/components/LevelBadge';
 import { cn } from '@/utils';
 import type { Region } from '@/types/region';
-import { searchRegions, highlightMatch, getLevelLabel, type SearchResult } from '@/utils/search';
+import { searchRegions, highlightMatch, type SearchResult } from '@/utils/search';
 
 interface SearchBoxProps {
   className?: string;
@@ -220,9 +220,7 @@ export function SearchBox({
                       {result.region.path}
                     </div>
                   </div>
-                  <Badge variant="secondary" className="flex-shrink-0 text-xs">
-                    {getLevelLabel(result.region.level)}
-                  </Badge>
+                  <LevelBadge level={result.region.level} />
                 </li>
               ))}
             </ul>

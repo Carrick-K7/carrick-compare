@@ -9,8 +9,9 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/utils';
+import { LevelBadge } from '@/components/LevelBadge';
 import { findSimilarRegions, getDiffColorClass } from '@/utils/similarity';
+import { cn } from '@/utils';
 import type { SimilarRegion } from '@/utils/similarity';
 
 interface SimilarRegionsListProps {
@@ -179,6 +180,7 @@ const SimilarRegionItem: React.FC<SimilarRegionItemProps> = ({
             <span className="text-sm font-medium truncate" title={item.region.path}>
               {item.region.path}
             </span>
+            <LevelBadge level={item.region.level} />
           </div>
 
           {/* GDP数值 */}

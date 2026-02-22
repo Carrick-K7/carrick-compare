@@ -10,6 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { LevelBadge } from '@/components/LevelBadge';
 import { getProvinceRanking, getLevelName, formatGDP } from '@/utils/ranking';
 import { getRegionByCode } from '@/utils/dataLoader';
 import type { RankingItem } from '@/types/comparison';
@@ -152,9 +153,12 @@ export function ProvinceRankingList({ regionCode }: ProvinceRankingListProps) {
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-col">
-                      <span className={item.isCurrent ? 'font-semibold text-primary' : ''}>
-                        {item.region.name}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className={item.isCurrent ? 'font-semibold text-primary' : ''}>
+                          {item.region.name}
+                        </span>
+                        <LevelBadge level={item.region.level} />
+                      </div>
                       {item.isCurrent && (
                         <span className="text-xs text-muted-foreground">当前</span>
                       )}

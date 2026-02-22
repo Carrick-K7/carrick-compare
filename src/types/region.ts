@@ -1,4 +1,4 @@
-export type RegionLevel = 'province' | 'city' | 'district';
+export type RegionLevel = 'province' | 'city' | 'district' | 'county_city';
 
 export interface Region {
   code: string;           // 行政区划代码 (如 440300)

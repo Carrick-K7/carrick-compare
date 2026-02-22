@@ -26,6 +26,7 @@ import {
 import type { Region } from '@/types/region';
 import type { GDPData } from '@/types/gdp';
 import { cn } from '@/utils';
+import { LevelBadge } from '@/components/LevelBadge';
 
 interface RegionInfoCardProps {
   region: Region;
@@ -158,6 +159,7 @@ export const RegionInfoCard: React.FC<RegionInfoCardProps> = ({
         <CardTitle className="text-2xl font-bold flex items-center gap-2">
           <MapPin className="h-6 w-6 text-primary" />
           {region.name}
+          <LevelBadge level={region.level} className="ml-2" />
         </CardTitle>
 
         {/* 面包屑路径 */}

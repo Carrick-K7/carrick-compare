@@ -63,7 +63,8 @@ export function getLevelName(level: RegionLevel): string {
   const levelMap: Record<RegionLevel, string> = {
     province: '省级',
     city: '地级',
-    district: '县级'
+    district: '县级',
+    county_city: '县级市'
   };
   return levelMap[level] || '';
 }

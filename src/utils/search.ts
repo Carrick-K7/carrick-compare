@@ -138,8 +138,9 @@ export function highlightMatch(text: string, query: string): { parts: Array<{ te
 export function getLevelLabel(level: string): string {
   const levelMap: Record<string, string> = {
     province: '省',
-    city: '市',
-    district: '区',
+    city: '地级市',
+    district: '市辖区',
+    county_city: '县级市',
   };
   return levelMap[level] || level;
 }
