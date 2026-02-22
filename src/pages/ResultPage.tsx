@@ -11,8 +11,7 @@ export default function ResultPage() {
   const { code } = useParams<{ code: string }>()
   const navigate = useNavigate()
   const [granularity, setGranularity] = useState<TimeGranularity>('year')
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentYear, setCurrentYear] = useState<number>(2024)
+  const [currentYear, setCurrentYear] = useState<number>(2023)
 
   const regionCode = code || ''
   
@@ -24,6 +23,17 @@ export default function ResultPage() {
     if (!region) return []
     return getRegionHistory(regionCode)
   }, [region, regionCode])
+
+  // 获取最新GDP数据（根据当前粒度）
+  const latestGDP = useMemo(() => {
+    const filtered = historyData.filter(d => d.granularity === granularity)
+    if (filtered.length === 0) return undefined
+    // 按年份和周期排序，取最新
+    return filtered.sort((a, b) => {
+      if (a.year !== b.year) return b.year - a.year
+      return b.period - a.period
+    })[0]
+  }, [historyData, granularity])
 
   // 处理区域不存在的情况
   if (!region) {

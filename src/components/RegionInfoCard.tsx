@@ -44,7 +44,6 @@ export const RegionInfoCard: React.FC<RegionInfoCardProps> = ({
   gdpData = [],
   currentYear = 2023,
   onYearChange,
-  latestGDP,
   className,
 }) => {
   const navigate = useNavigate();
