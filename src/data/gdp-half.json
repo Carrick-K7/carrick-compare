@@ -1,0 +1,19 @@
+[
+  { "regionCode": "440300", "year": 2023, "granularity": "half", "period": 1, "value": 16297.60 },
+  { "regionCode": "440300", "year": 2023, "granularity": "half", "period": 2, "value": 18308.80 },
+  { "regionCode": "440300", "year": 2024, "granularity": "half", "period": 1, "value": 17302.22 },
+  { "regionCode": "440300", "year": 2024, "granularity": "half", "period": 2, "value": 19499.65 },
+  
+  { "regionCode": "110000", "year": 2023, "granularity": "half", "period": 1, "value": 20621.30 },
+  { "regionCode": "110000", "year": 2023, "granularity": "half", "period": 2, "value": 23139.40 },
+  { "regionCode": "110000", "year": 2024, "granularity": "half", "period": 1, "value": 21785.20 },
+  { "regionCode": "110000", "year": 2024, "granularity": "half", "period": 2, "value": 24186.90 },
+  
+  { "regionCode": "310000", "year": 2023, "granularity": "half", "period": 1, "value": 21390.20 },
+  { "regionCode": "310000", "year": 2023, "granularity": "half", "period": 2, "value": 25828.50 },
+  { "regionCode": "310000", "year": 2024, "granularity": "half", "period": 1, "value": 22345.60 },
+  { "regionCode": "310000", "year": 2024, "granularity": "half", "period": 2, "value": 26921.70 },
+  
+  { "regionCode": "330100", "year": 2024, "granularity": "half", "period": 1, "value": 10137.00 },
+  { "regionCode": "330100", "year": 2024, "granularity": "half", "period": 2, "value": 11723.30 }
+]

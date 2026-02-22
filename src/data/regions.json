@@ -1,0 +1,152 @@
+[
+  {
+    "code": "440000",
+    "name": "广东省",
+    "level": "province",
+    "provinceCode": "440000",
+    "path": "广东省"
+  },
+  {
+    "code": "440300",
+    "name": "深圳市",
+    "level": "city",
+    "parentCode": "440000",
+    "provinceCode": "440000",
+    "path": "广东省深圳市"
+  },
+  {
+    "code": "440100",
+    "name": "广州市",
+    "level": "city",
+    "parentCode": "440000",
+    "provinceCode": "440000",
+    "path": "广东省广州市"
+  },
+  {
+    "code": "110000",
+    "name": "北京市",
+    "level": "province",
+    "provinceCode": "110000",
+    "path": "北京市"
+  },
+  {
+    "code": "310000",
+    "name": "上海市",
+    "level": "province",
+    "provinceCode": "310000",
+    "path": "上海市"
+  },
+  {
+    "code": "330000",
+    "name": "浙江省",
+    "level": "province",
+    "provinceCode": "330000",
+    "path": "浙江省"
+  },
+  {
+    "code": "330100",
+    "name": "杭州市",
+    "level": "city",
+    "parentCode": "330000",
+    "provinceCode": "330000",
+    "path": "浙江省杭州市"
+  },
+  {
+    "code": "320000",
+    "name": "江苏省",
+    "level": "province",
+    "provinceCode": "320000",
+    "path": "江苏省"
+  },
+  {
+    "code": "320500",
+    "name": "苏州市",
+    "level": "city",
+    "parentCode": "320000",
+    "provinceCode": "320000",
+    "path": "江苏省苏州市"
+  },
+  {
+    "code": "320100",
+    "name": "南京市",
+    "level": "city",
+    "parentCode": "320000",
+    "provinceCode": "320000",
+    "path": "江苏省南京市"
+  },
+  {
+    "code": "500000",
+    "name": "重庆市",
+    "level": "province",
+    "provinceCode": "500000",
+    "path": "重庆市"
+  },
+  {
+    "code": "510000",
+    "name": "四川省",
+    "level": "province",
+    "provinceCode": "510000",
+    "path": "四川省"
+  },
+  {
+    "code": "510100",
+    "name": "成都市",
+    "level": "city",
+    "parentCode": "510000",
+    "provinceCode": "510000",
+    "path": "四川省成都市"
+  },
+  {
+    "code": "420000",
+    "name": "湖北省",
+    "level": "province",
+    "provinceCode": "420000",
+    "path": "湖北省"
+  },
+  {
+    "code": "420100",
+    "name": "武汉市",
+    "level": "city",
+    "parentCode": "420000",
+    "provinceCode": "420000",
+    "path": "湖北省武汉市"
+  },
+  {
+    "code": "370000",
+    "name": "山东省",
+    "level": "province",
+    "provinceCode": "370000",
+    "path": "山东省"
+  },
+  {
+    "code": "370100",
+    "name": "济南市",
+    "level": "city",
+    "parentCode": "370000",
+    "provinceCode": "370000",
+    "path": "山东省济南市"
+  },
+  {
+    "code": "370200",
+    "name": "青岛市",
+    "level": "city",
+    "parentCode": "370000",
+    "provinceCode": "370000",
+    "path": "山东省青岛市"
+  },
+  {
+    "code": "410000",
+    "name": "河南省",
+    "level": "province",
+    "provinceCode": "410000",
+    "path": "河南省"
+  },
+  {
+    "code": "410100",
+    "name": "郑州市",
+    "level": "city",
+    "parentCode": "410000",
+    "provinceCode": "410000",
+    "path": "河南省郑州市"
+  }
+]
