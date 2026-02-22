@@ -3,7 +3,7 @@ import type { RegionLevel } from '../types/region';
 import type { RankingItem } from '../types/comparison';
 import { getRegionByCode } from './dataLoader';
 
-const CURRENT_YEAR = 2023;
+const CURRENT_YEAR = 2025;
 
 /**
  * 获取省内同级排名

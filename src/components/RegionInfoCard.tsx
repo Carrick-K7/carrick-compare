@@ -43,7 +43,7 @@ interface RegionInfoCardProps {
 export const RegionInfoCard: React.FC<RegionInfoCardProps> = ({
   region,
   gdpData = [],
-  currentYear = 2023,
+  currentYear = 2025,
   onYearChange,
   className,
 }) => {
@@ -143,10 +143,10 @@ export const RegionInfoCard: React.FC<RegionInfoCardProps> = ({
     }
   };
 
-  // 生成年份选项 (2015-2024)
+  // 生成年份选项 (2015-2025)
   const yearOptions = useMemo(() => {
     const years: number[] = [];
-    for (let year = 2024; year >= 2015; year--) {
+    for (let year = 2025; year >= 2015; year--) {
       years.push(year);
     }
     return years;

@@ -28,7 +28,7 @@ const INITIAL_DISPLAY_COUNT = 5;
  */
 export const SimilarRegionsList: React.FC<SimilarRegionsListProps> = ({
   regionCode,
-  year = 2023,
+  year = 2025,
   className,
 }) => {
   const navigate = useNavigate();

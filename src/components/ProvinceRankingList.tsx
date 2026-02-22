@@ -173,7 +173,7 @@ export function ProvinceRankingList({ regionCode }: ProvinceRankingListProps) {
           </Table>
         </div>
         <p className="text-xs text-muted-foreground px-4 py-2 border-t">
-          数据年份：2023年 | 点击行可跳转查看详情
+          数据年份：2025年 | 点击行可跳转查看详情
         </p>
       </CardContent>
     </Card>

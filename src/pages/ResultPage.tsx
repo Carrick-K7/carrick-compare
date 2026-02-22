@@ -14,7 +14,7 @@ export default function ResultPage() {
   const { code } = useParams<{ code: string }>()
   const navigate = useNavigate()
   const [granularity, setGranularity] = useState<TimeGranularity>('year')
-  const [currentYear, setCurrentYear] = useState<number>(2023)
+  const [currentYear, setCurrentYear] = useState<number>(2025)
 
   const regionCode = code || ''
   

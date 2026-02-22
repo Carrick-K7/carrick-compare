@@ -12,7 +12,7 @@ export interface SimilarRegion {
 export interface FindSimilarOptions {
   limit?: number;         // 返回数量，默认10
   sameLevelOnly?: boolean; // 只匹配同级，默认true
-  year?: number;          // 年份，默认2023
+  year?: number;          // 年份，默认2025
 }
 
 /**
@@ -28,7 +28,7 @@ export function findSimilarRegions(
   const {
     limit = 10,
     sameLevelOnly = true,
-    year = 2023,
+    year = 2025,
   } = options;
 
   // 1. 获取目标区域信息
