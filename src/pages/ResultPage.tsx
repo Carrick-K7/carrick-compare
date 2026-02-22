@@ -2,8 +2,11 @@ import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ArrowLeft, MapPin, BarChart3, GitCompare, Trophy, Calendar } from 'lucide-react'
+import { ArrowLeft, MapPin, GitCompare, Calendar } from 'lucide-react'
 import { RegionInfoCard } from '@/components/RegionInfoCard'
+import { GDPTrendChart } from '@/components/GDPTrendChart'
+import { ProvinceRankingList } from '@/components/ProvinceRankingList'
+import { SimilarRegionsList } from '@/components/SimilarRegionsList'
 import { getRegionByCode, getRegionHistory } from '@/utils/dataLoader'
 import type { TimeGranularity } from '@/types/gdp'
 
@@ -93,29 +96,13 @@ export default function ResultPage() {
             />
           </div>
 
-          {/* 中间栏：历史趋势图表（T-009占位） */}
+          {/* 中间栏：历史趋势图表 */}
           <div className="lg:col-span-6 order-2">
-            <Card className="h-full min-h-[400px]">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <BarChart3 className="h-5 w-5 text-primary" />
-                  <CardTitle>历史趋势图表</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="flex items-center justify-center h-[300px]">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
-                    <BarChart3 className="h-8 w-8 text-muted-foreground" />
-                  </div>
-                  <p className="text-muted-foreground">
-                    T-009: 历史趋势图表模块占位
-                  </p>
-                  <p className="text-sm text-muted-foreground/60 mt-1">
-                    {granularity === 'year' ? '年度' : '半年度'}数据视图
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <GDPTrendChart 
+              data={historyData}
+              granularity={granularity}
+              regionName={region.name}
+            />
 
             {/* 其他功能占位 */}
             <Card className="mt-6">
@@ -137,39 +124,11 @@ export default function ResultPage() {
 
           {/* 右侧栏：相似推荐 + 省内排名 */}
           <div className="lg:col-span-3 order-3 space-y-6">
-            {/* 相似区域推荐（T-007占位） */}
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <GitCompare className="h-5 w-5 text-primary" />
-                  <CardTitle className="text-base">相似区域推荐</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="flex items-center justify-center h-[150px]">
-                <div className="text-center">
-                  <p className="text-sm text-muted-foreground">
-                    T-007: 相似区域推荐模块占位
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            {/* 相似区域推荐（T-007） */}
+            <SimilarRegionsList regionCode={regionCode} year={currentYear} />
 
-            {/* 省内同级排名（T-008占位） */}
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Trophy className="h-5 w-5 text-primary" />
-                  <CardTitle className="text-base">省内同级排名</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="flex items-center justify-center h-[150px]">
-                <div className="text-center">
-                  <p className="text-sm text-muted-foreground">
-                    T-008: 省内同级排名模块占位
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            {/* 省内同级排名（T-008） */}
+            <ProvinceRankingList regionCode={regionCode} />
           </div>
         </div>
       </main>
