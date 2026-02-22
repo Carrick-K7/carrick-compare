@@ -9714,5 +9714,32 @@
     "granularity": "year",
     "period": 1,
     "value": 1450.2
+  },
+  {
+    "regionCode": "330282",
+    "year": 2023,
+    "granularity": "year",
+    "period": 1,
+    "value": 2639.45,
+    "source": "https://www.zgcounty.com/news/49907.html",
+    "sourceName": "中国县域 - 慈溪市2023年统计公报"
+  },
+  {
+    "regionCode": "520382",
+    "year": 2023,
+    "granularity": "year",
+    "period": 1,
+    "value": 1800.32,
+    "source": "https://baike.baidu.com/item/仁怀市/525795",
+    "sourceName": "百度百科 - 仁怀市(引用官方数据)"
+  },
+  {
+    "regionCode": "150622",
+    "year": 2023,
+    "granularity": "year",
+    "period": 1,
+    "value": 1400.26,
+    "source": "https://tjgb.hongheiku.com/xjtjgb/xj2020/53804.html",
+    "sourceName": "红黑统计公报库 - 准格尔旗2023年统计公报"
   }
 ]
