@@ -8818,5 +8818,61 @@
     "granularity": "year",
     "period": 1,
     "value": 2779.33
+  },
+  {
+    "regionCode": "110100",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 52073.4
+  },
+  {
+    "regionCode": "310100",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 56708.71
+  },
+  {
+    "regionCode": "440100",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 32039.46
+  },
+  {
+    "regionCode": "440300",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 38731.8
+  },
+  {
+    "regionCode": "500100",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 33753.93
+  },
+  {
+    "regionCode": "320500",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 27700
+  },
+  {
+    "regionCode": "330300",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 10213.9
+  },
+  {
+    "regionCode": "210200",
+    "year": 2025,
+    "granularity": "year",
+    "period": 1,
+    "value": 10002.1
   }
 ]
