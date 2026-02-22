@@ -14,7 +14,6 @@ export default function ResultPage() {
   const { code } = useParams<{ code: string }>()
   const navigate = useNavigate()
   const [granularity, setGranularity] = useState<TimeGranularity>('year')
-  const [currentYear, setCurrentYear] = useState<number>(2025)
 
   const regionCode = code || ''
   
@@ -26,6 +25,20 @@ export default function ResultPage() {
     if (!region) return []
     return getRegionHistory(regionCode)
   }, [region, regionCode])
+
+  // 获取有数据的年份列表（降序）
+  const availableYears = useMemo(() => {
+    const years = new Set(historyData.map(d => d.year))
+    return Array.from(years).sort((a, b) => b - a)
+  }, [historyData])
+
+  // 获取最新有数据的年份
+  const latestAvailableYear = useMemo(() => {
+    return availableYears[0] || 2025
+  }, [availableYears])
+
+  // 使用最新有数据的年份作为默认值
+  const [currentYear, setCurrentYear] = useState<number>(latestAvailableYear)
 
   // 处理区域不存在的情况
   if (!region) {
