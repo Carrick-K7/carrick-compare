@@ -1,0 +1,723 @@
+[
+  {
+    "regionCode": "110101",
+    "regionName": "东城区",
+    "year": 2024,
+    "value": 3500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "110102",
+    "regionName": "西城区",
+    "year": 2024,
+    "value": 5500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "110105",
+    "regionName": "朝阳区",
+    "year": 2024,
+    "value": 9000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "110108",
+    "regionName": "海淀区",
+    "year": 2024,
+    "value": 11000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "130100",
+    "regionName": "石家庄市",
+    "year": 2024,
+    "value": 7500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "140100",
+    "regionName": "太原市",
+    "year": 2024,
+    "value": 5600,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "150100",
+    "regionName": "呼和浩特市",
+    "year": 2024,
+    "value": 3800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "150200",
+    "regionName": "包头市",
+    "year": 2024,
+    "value": 4200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "220100",
+    "regionName": "长春市",
+    "year": 2024,
+    "value": 6638,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "310104",
+    "regionName": "徐汇区",
+    "year": 2024,
+    "value": 2800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "310105",
+    "regionName": "长宁区",
+    "year": 2024,
+    "value": 1800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "310106",
+    "regionName": "静安区",
+    "year": 2024,
+    "value": 3200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "310107",
+    "regionName": "普陀区",
+    "year": 2024,
+    "value": 1500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "310109",
+    "regionName": "虹口区",
+    "year": 2024,
+    "value": 1200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "310115",
+    "regionName": "浦东新区",
+    "year": 2024,
+    "value": 17700,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320000",
+    "regionName": "江苏省",
+    "year": 2024,
+    "value": 137008,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320505",
+    "regionName": "虎丘区",
+    "year": 2024,
+    "value": 1800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320506",
+    "regionName": "吴中区",
+    "year": 2024,
+    "value": 1600,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320507",
+    "regionName": "相城区",
+    "year": 2024,
+    "value": 1200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320800",
+    "regionName": "淮安市",
+    "year": 2024,
+    "value": 5000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "321000",
+    "regionName": "扬州市",
+    "year": 2024,
+    "value": 7500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "321100",
+    "regionName": "镇江市",
+    "year": 2024,
+    "value": 5500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330000",
+    "regionName": "浙江省",
+    "year": 2024,
+    "value": 90100,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330100",
+    "regionName": "杭州市",
+    "year": 2024,
+    "value": 21860,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330500",
+    "regionName": "湖州市",
+    "year": 2024,
+    "value": 4200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330600",
+    "regionName": "绍兴市",
+    "year": 2024,
+    "value": 8500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330700",
+    "regionName": "金华市",
+    "year": 2024,
+    "value": 3200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330800",
+    "regionName": "衢州市",
+    "year": 2024,
+    "value": 2200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330900",
+    "regionName": "舟山市",
+    "year": 2024,
+    "value": 2400,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "331000",
+    "regionName": "台州市",
+    "year": 2024,
+    "value": 6800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "331100",
+    "regionName": "丽水市",
+    "year": 2024,
+    "value": 2000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "340000",
+    "regionName": "安徽省",
+    "year": 2024,
+    "value": 50000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "340100",
+    "regionName": "合肥市",
+    "year": 2024,
+    "value": 12805,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350200",
+    "regionName": "厦门市",
+    "year": 2024,
+    "value": 8589,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350300",
+    "regionName": "莆田市",
+    "year": 2024,
+    "value": 3200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350600",
+    "regionName": "漳州市",
+    "year": 2024,
+    "value": 5600,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350700",
+    "regionName": "南平市",
+    "year": 2024,
+    "value": 2300,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350800",
+    "regionName": "龙岩市",
+    "year": 2024,
+    "value": 3400,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350900",
+    "regionName": "宁德市",
+    "year": 2024,
+    "value": 3900,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "360100",
+    "regionName": "南昌市",
+    "year": 2024,
+    "value": 7500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370000",
+    "regionName": "山东省",
+    "year": 2024,
+    "value": 98566,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370300",
+    "regionName": "淄博市",
+    "year": 2024,
+    "value": 4800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370500",
+    "regionName": "东营市",
+    "year": 2024,
+    "value": 4200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370700",
+    "regionName": "潍坊市",
+    "year": 2024,
+    "value": 8200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370800",
+    "regionName": "济宁市",
+    "year": 2024,
+    "value": 6400,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "410200",
+    "regionName": "开封市",
+    "year": 2024,
+    "value": 2700,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "410300",
+    "regionName": "洛阳市",
+    "year": 2024,
+    "value": 6200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "410600",
+    "regionName": "安阳市",
+    "year": 2024,
+    "value": 2600,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "420500",
+    "regionName": "宜昌市",
+    "year": 2024,
+    "value": 6200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "420600",
+    "regionName": "襄阳市",
+    "year": 2024,
+    "value": 6000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430200",
+    "regionName": "株洲市",
+    "year": 2024,
+    "value": 3800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430300",
+    "regionName": "湘潭市",
+    "year": 2024,
+    "value": 2800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430400",
+    "regionName": "衡阳市",
+    "year": 2024,
+    "value": 4200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430500",
+    "regionName": "邵阳市",
+    "year": 2024,
+    "value": 2700,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440103",
+    "regionName": "荔湾区",
+    "year": 2024,
+    "value": 1300,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440104",
+    "regionName": "越秀区",
+    "year": 2024,
+    "value": 2900,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440105",
+    "regionName": "海珠区",
+    "year": 2024,
+    "value": 2800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440106",
+    "regionName": "天河区",
+    "year": 2024,
+    "value": 6800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440111",
+    "regionName": "白云区",
+    "year": 2024,
+    "value": 2600,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440112",
+    "regionName": "黄埔区",
+    "year": 2024,
+    "value": 4500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440113",
+    "regionName": "番禺区",
+    "year": 2024,
+    "value": 3000,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440114",
+    "regionName": "花都区",
+    "year": 2024,
+    "value": 1900,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440303",
+    "regionName": "罗湖区",
+    "year": 2024,
+    "value": 2800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440304",
+    "regionName": "福田区",
+    "year": 2024,
+    "value": 6200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440305",
+    "regionName": "南山区",
+    "year": 2024,
+    "value": 9235,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440306",
+    "regionName": "宝安区",
+    "year": 2024,
+    "value": 5300,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440307",
+    "regionName": "龙岗区",
+    "year": 2024,
+    "value": 5500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440308",
+    "regionName": "盐田区",
+    "year": 2024,
+    "value": 900,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440309",
+    "regionName": "龙华区",
+    "year": 2024,
+    "value": 3100,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440310",
+    "regionName": "坪山区",
+    "year": 2024,
+    "value": 1300,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440311",
+    "regionName": "光明区",
+    "year": 2024,
+    "value": 1700,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440500",
+    "regionName": "汕头市",
+    "year": 2024,
+    "value": 3200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440700",
+    "regionName": "江门市",
+    "year": 2024,
+    "value": 4200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "440800",
+    "regionName": "湛江市",
+    "year": 2024,
+    "value": 3800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "441200",
+    "regionName": "肇庆市",
+    "year": 2024,
+    "value": 2800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "441300",
+    "regionName": "惠州市",
+    "year": 2024,
+    "value": 4800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "441400",
+    "regionName": "梅州市",
+    "year": 2024,
+    "value": 1600,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "441800",
+    "regionName": "清远市",
+    "year": 2024,
+    "value": 2200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "450100",
+    "regionName": "南宁市",
+    "year": 2024,
+    "value": 5800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "460100",
+    "regionName": "海口市",
+    "year": 2024,
+    "value": 2400,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "510000",
+    "regionName": "四川省",
+    "year": 2024,
+    "value": 64697,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "510700",
+    "regionName": "绵阳市",
+    "year": 2024,
+    "value": 4200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "520100",
+    "regionName": "贵阳市",
+    "year": 2024,
+    "value": 5800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "610300",
+    "regionName": "宝鸡市",
+    "year": 2024,
+    "value": 2800,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "610400",
+    "regionName": "咸阳市",
+    "year": 2024,
+    "value": 3200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "650100",
+    "regionName": "乌鲁木齐市",
+    "year": 2024,
+    "value": 4500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320500",
+    "regionName": "苏州市",
+    "year": 2025,
+    "value": 27700,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "150622",
+    "regionName": "准格尔旗",
+    "year": 2024,
+    "value": 1450,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "210281",
+    "regionName": "瓦房店市",
+    "year": 2024,
+    "value": 1100,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320282",
+    "regionName": "宜兴市",
+    "year": 2024,
+    "value": 2455,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320582",
+    "regionName": "张家港市",
+    "year": 2024,
+    "value": 3374,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "320685",
+    "regionName": "海安市",
+    "year": 2024,
+    "value": 1507,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "321283",
+    "regionName": "泰兴市",
+    "year": 2024,
+    "value": 1467,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "330282",
+    "regionName": "慈溪市",
+    "year": 2024,
+    "value": 2750,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "350582",
+    "regionName": "晋江市",
+    "year": 2024,
+    "value": 3500,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370281",
+    "regionName": "胶州市",
+    "year": 2024,
+    "value": 1750,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370681",
+    "regionName": "龙口市",
+    "year": 2024,
+    "value": 1650,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "370682",
+    "regionName": "荣成市",
+    "year": 2024,
+    "value": 1250,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430121",
+    "regionName": "长沙县",
+    "year": 2024,
+    "value": 2200,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430181",
+    "regionName": "浏阳市",
+    "year": 2024,
+    "value": 1850,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "430182",
+    "regionName": "宁乡市",
+    "year": 2024,
+    "value": 1300,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "520382",
+    "regionName": "仁怀市",
+    "year": 2024,
+    "value": 1900,
+    "reason": "整数值无官方来源验证"
+  },
+  {
+    "regionCode": "610881",
+    "regionName": "神木市",
+    "year": 2024,
+    "value": 2450,
+    "reason": "整数值无官方来源验证"
+  }
+]

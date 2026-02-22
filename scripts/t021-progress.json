@@ -1,0 +1,14 @@
+{
+  "phase": "Complete",
+  "timestamp": "2026-02-22T13:53:29.281Z",
+  "stats": {
+    "total": 1391,
+    "processed": 0,
+    "addedSource": 1288,
+    "deleted": 103,
+    "integerDeleted": 103,
+    "byPhase": {},
+    "finalCount": 1288,
+    "deletionCount": 103
+  }
+}
