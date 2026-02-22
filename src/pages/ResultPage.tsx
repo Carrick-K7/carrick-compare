@@ -1,94 +1,49 @@
+import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ArrowLeft, MapPin, Users, TrendingUp } from 'lucide-react'
-
-// Mock data for demonstration
-const mockRegionData: Record<string, {
-  name: string
-  population: string
-  gdp: string
-  growth: string
-  description: string
-}> = {
-  US: {
-    name: 'United States',
-    population: '331.9 million',
-    gdp: '$23.32 trillion',
-    growth: '+5.9%',
-    description: 'The United States is the world\'s largest economy, characterized by high productivity, technological innovation, and diverse industries.'
-  },
-  CN: {
-    name: 'China',
-    population: '1.41 billion',
-    gdp: '$17.73 trillion',
-    growth: '+8.1%',
-    description: 'China is the world\'s second-largest economy, known for its rapid growth, manufacturing capabilities, and expanding technology sector.'
-  },
-  GB: {
-    name: 'United Kingdom',
-    population: '67.5 million',
-    gdp: '$3.13 trillion',
-    growth: '+7.4%',
-    description: 'The UK has a highly developed social market economy, with significant contributions from services, manufacturing, and creative industries.'
-  },
-  DE: {
-    name: 'Germany',
-    population: '83.2 million',
-    gdp: '$4.26 trillion',
-    growth: '+2.9%',
-    description: 'Germany is Europe\'s largest economy, renowned for its automotive industry, engineering excellence, and export-oriented economy.'
-  },
-  JP: {
-    name: 'Japan',
-    population: '125.7 million',
-    gdp: '$4.94 trillion',
-    growth: '+1.6%',
-    description: 'Japan is known for its advanced technology, automotive industry, and unique blend of traditional and modern culture.'
-  },
-  FR: {
-    name: 'France',
-    population: '67.8 million',
-    gdp: '$2.94 trillion',
-    growth: '+7.0%',
-    description: 'France has a diverse economy with strong tourism, agriculture, luxury goods, and aerospace sectors.'
-  },
-  IN: {
-    name: 'India',
-    population: '1.40 billion',
-    gdp: '$3.18 trillion',
-    growth: '+8.7%',
-    description: 'India is one of the world\'s fastest-growing major economies, with a young population and thriving technology sector.'
-  },
-  BR: {
-    name: 'Brazil',
-    population: '214.3 million',
-    gdp: '$1.61 trillion',
-    growth: '+4.6%',
-    description: 'Brazil is the largest economy in Latin America, rich in natural resources with a diverse industrial base.'
-  }
-}
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ArrowLeft, MapPin, BarChart3, GitCompare, Trophy, Calendar } from 'lucide-react'
+import { RegionInfoCard } from '@/components/RegionInfoCard'
+import { getRegionByCode, getRegionHistory } from '@/utils/dataLoader'
+import type { TimeGranularity } from '@/types/gdp'
 
 export default function ResultPage() {
   const { code } = useParams<{ code: string }>()
   const navigate = useNavigate()
-  
-  const regionCode = code?.toUpperCase() || ''
-  const data = mockRegionData[regionCode]
+  const [granularity, setGranularity] = useState<TimeGranularity>('year')
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [currentYear, setCurrentYear] = useState<number>(2024)
 
-  if (!data) {
+  const regionCode = code || ''
+  
+  // 加载区域数据
+  const region = useMemo(() => getRegionByCode(regionCode), [regionCode])
+  
+  // 加载历史GDP数据
+  const historyData = useMemo(() => {
+    if (!region) return []
+    return getRegionHistory(regionCode)
+  }, [region, regionCode])
+
+  // 处理区域不存在的情况
+  if (!region) {
     return (
-      <div className="min-h-screen bg-slate-50 p-4">
+      <div className="min-h-screen bg-background p-4">
         <div className="mx-auto max-w-4xl pt-20">
           <Card>
             <CardContent className="p-8 text-center">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Region Not Found</h2>
-              <p className="text-slate-600 mb-6">
-                We couldn\'t find data for region code: {regionCode}
-              </p>
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-4">
+                  <MapPin className="h-8 w-8 text-destructive" />
+                </div>
+                <h2 className="text-2xl font-bold mb-2">区域不存在</h2>
+                <p className="text-muted-foreground">
+                  未找到行政区划代码：<code className="bg-muted px-1 py-0.5 rounded">{regionCode}</code>
+                </p>
+              </div>              
               <Button onClick={() => navigate('/')} variant="outline">
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
+                返回首页
               </Button>
             </CardContent>
           </Card>
@@ -98,95 +53,160 @@ export default function ResultPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 p-4">
-      <div className="mx-auto max-w-4xl pt-8">
-        <Button 
-          variant="ghost" 
-          onClick={() => navigate('/')}
-          className="mb-6"
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
-        </Button>
-
-        <Card className="shadow-lg mb-6">
-          <CardHeader>
-            <div className="flex items-center gap-3">
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <MapPin className="h-6 w-6 text-blue-600" />
-              </div>
-              <div>
-                <CardTitle className="text-3xl">{data.name}</CardTitle>
-                <CardDescription>Region Code: {regionCode}</CardDescription>
-              </div>
+    <div className="min-h-screen bg-background">
+      {/* 顶部导航栏 */}
+      <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => navigate('/')}
+                className="gap-2"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                返回首页
+              </Button>
+            </div>            
+            <div className="flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-primary hidden sm:block" />
+              <h1 className="text-lg sm:text-xl font-semibold truncate">
+                当前查看: {region.path}
+              </h1>
             </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-slate-700 leading-relaxed">{data.description}</p>
-          </CardContent>
-        </Card>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-2">
-                <Users className="h-5 w-5 text-blue-500" />
-                <span className="text-sm text-slate-500">Population</span>
-              </div>
-              <div className="text-2xl font-bold text-slate-900">{data.population}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-2">
-                <TrendingUp className="h-5 w-5 text-green-500" />
-                <span className="text-sm text-slate-500">GDP</span>
-              </div>
-              <div className="text-2xl font-bold text-slate-900">{data.gdp}</div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-2">
-                <TrendingUp className="h-5 w-5 text-purple-500" />
-                <span className="text-sm text-slate-500">Growth Rate</span>
-              </div>
-              <div className="text-2xl font-bold text-slate-900">{data.growth}</div>
-            </CardContent>
-          </Card>
+          </div>
         </div>
+      </header>
 
-        <Card className="mt-6 shadow">
-          <CardHeader>
-            <CardTitle>Key Insights</CardTitle>
-            <CardDescription>
-              Comparative analysis for {data.name}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-2 text-slate-700">
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Strong economic fundamentals with diversified sectors</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Stable growth trajectory over the past decade</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Attractive destination for foreign investment</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Well-developed infrastructure and institutions</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
+      {/* 主内容区域 */}
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+        {/* 桌面端三栏布局 / 移动端单栏堆叠 */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          {/* 左侧栏：区域信息卡片 */}
+          <div className="lg:col-span-3 order-1">
+            <RegionInfoCard 
+              region={region} 
+              gdpData={historyData}
+              currentYear={currentYear}
+              onYearChange={setCurrentYear}
+            />
+          </div>
+
+          {/* 中间栏：历史趋势图表（T-009占位） */}
+          <div className="lg:col-span-6 order-2">
+            <Card className="h-full min-h-[400px]">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="h-5 w-5 text-primary" />
+                  <CardTitle>历史趋势图表</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="flex items-center justify-center h-[300px]">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-muted mb-4">
+                    <BarChart3 className="h-8 w-8 text-muted-foreground" />
+                  </div>
+                  <p className="text-muted-foreground">
+                    T-009: 历史趋势图表模块占位
+                  </p>
+                  <p className="text-sm text-muted-foreground/60 mt-1">
+                    {granularity === 'year' ? '年度' : '半年度'}数据视图
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 其他功能占位 */}
+            <Card className="mt-6">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <GitCompare className="h-5 w-5 text-primary" />
+                  <CardTitle>其他功能</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="flex items-center justify-center h-[150px]">
+                <div className="text-center">
+                  <p className="text-muted-foreground">
+                    T-008: 其他功能模块占位
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* 右侧栏：相似推荐 + 省内排名 */}
+          <div className="lg:col-span-3 order-3 space-y-6">
+            {/* 相似区域推荐（T-007占位） */}
+            <Card>
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <GitCompare className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-base">相似区域推荐</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="flex items-center justify-center h-[150px]">
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground">
+                    T-007: 相似区域推荐模块占位
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 省内同级排名（T-008占位） */}
+            <Card>
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <Trophy className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-base">省内同级排名</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="flex items-center justify-center h-[150px]">
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground">
+                    T-008: 省内同级排名模块占位
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </main>
+
+      {/* 底部：时间粒度切换 */}
+      <footer className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-14 items-center justify-center gap-4">
+            <div className="flex items-center gap-2">
+              <Calendar className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground">时间粒度:</span>
+            </div>            
+            <div className="flex bg-muted rounded-lg p-1">
+              <Button
+                variant={granularity === 'year' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setGranularity('year')}
+                className="text-xs"
+              >
+                年度
+              </Button>
+              <Button
+                variant={granularity === 'half' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setGranularity('half')}
+                className="text-xs"
+              >
+                半年度
+              </Button>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* 底部占位，防止内容被固定footer遮挡 */}
+      <div className="h-14" />
     </div>
   )
 }
